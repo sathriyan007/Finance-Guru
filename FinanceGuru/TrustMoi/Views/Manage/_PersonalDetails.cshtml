@@ -1,0 +1,84 @@
+﻿@using TrustMoi.Common.Enums
+@model TrustMoi.ViewModels.PersonDetailsVm
+
+@using (Html.BeginForm("SavePersonalDetails", "Manage", FormMethod.Post, new { id = "personalDetailsForm", @class = "form-horizontal", role = "form" }))
+{
+    <div class="container-fluid">
+        <div class="row spacer-md">
+            <div class="col-md-8">
+                <div class="container-fluid">
+                    <div class="row">
+                        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-4 control-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row spacer-sm">
+                        @Html.LabelFor(m => m.LastName, new { @class = "col-md-4 control-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row spacer-sm">
+                        @Html.LabelFor(m => m.DateOfBirth, new { @class = "col-md-4 control-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control datepicker" })
+                        </div>
+                    </div>
+                    <div class="row spacer-sm">
+                        @Html.LabelFor(m => m.Gender, new { @class = "col-md-4 control-label" })
+                        <div class="col-md-8">
+                            @Html.RadioButtonFor(m => m.Gender, GenderEnum.Male.ToString(), new { id = GenderEnum.Male.ToString() })
+                            <label class="normalLabel" for="@GenderEnum.Male.ToString()">@GenderEnum.Male.ToString()</label>
+                            @Html.RadioButtonFor(m => m.Gender, GenderEnum.Female.ToString(), new { id = GenderEnum.Female.ToString() })
+                            <label class="normalLabel" for="@GenderEnum.Female.ToString()">@GenderEnum.Female.ToString()</label>
+                        </div>
+                    </div>
+                    <div class="row spacer-sm">
+                        @Html.LabelFor(m => m.AddressLine1, new { @class = "col-md-4 control-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.AddressLine1, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row spacer-sm">
+                        @Html.LabelFor(m => m.AddressLine2, new { @class = "col-md-4 control-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.AddressLine2, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row spacer-sm">
+                        @Html.LabelFor(m => m.City, new { @class = "col-md-4 control-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row spacer-sm">
+                        @Html.LabelFor(m => m.Phone, new { @class = "col-md-4 control-label" })
+                        <div class="col-md-8">
+                            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row spacer-sm">
+                        <div class="col-md-8 col-md-offset-4">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row spacer-md">
+                    <div class="col-md-12">
+                        Information
+                    </div>
+                </div>
+                <div class="row spacer-md">
+                    <div class="col-md-12">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WEDIj9JBTC8" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

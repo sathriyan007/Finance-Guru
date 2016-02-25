@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="208dc0085af0471fa41a312efc89cef9" Name="Diagram1">
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.AspNetRole" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="3.625" />
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.Answer" Width="1.5" PointX="3" PointY="13.25" />
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.AspNetUser" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.Question" Width="1.5" PointX="0.75" PointY="13.25" />
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.UserAnswer" Width="1.5" PointX="5.25" PointY="11.25" />
+        <AssociationConnector Association="TrustMoi.DatabaseModel.FK_Answers_Questions" />
+        <AssociationConnector Association="TrustMoi.DatabaseModel.FK_UserAnswers_Answers" />
+        <AssociationConnector Association="TrustMoi.DatabaseModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="TrustMoi.DatabaseModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="TrustMoi.DatabaseModel.FK_UserAnswers_AspNetUsers" />
+        <AssociationConnector Association="TrustMoi.DatabaseModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="TrustMoi.DatabaseModel.UserPerson" Width="1.5" PointX="5.25" PointY="7" />
+        <AssociationConnector Association="TrustMoi.DatabaseModel.FK_UserPerson_AspNetUsers" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
