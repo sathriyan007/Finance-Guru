@@ -42,6 +42,8 @@ namespace TrustMoi.ViewModels
 
     public class ManagePersonVm
     {
+        public string Key { get; set; }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }

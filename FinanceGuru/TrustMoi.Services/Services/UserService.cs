@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using TrustMoi.Common.Utilities;
+using System.Text.RegularExpressions;
 using TrustMoi.Data;
 using TrustMoi.Data.Interfaces;
 using TrustMoi.Services.Base;
@@ -30,7 +31,7 @@ namespace TrustMoi.Services.Services
             return _personDetailMapper.Map(_userRepository.Single(p => p.Id == userId));
         }
 
-        public IEnumerable<ManagePersonVm> GetAllUsers()
+        public IEnumerable<ManagePersonVm> GetFilteredUsers()
         {
             return _userRepository.GetAll().Select(p => _manageUserMapper.Map(p));
         }
